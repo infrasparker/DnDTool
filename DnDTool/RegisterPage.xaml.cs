@@ -17,25 +17,18 @@ using MahApps.Metro.Controls;
 namespace DnDTool
 {
     /// <summary>
-    /// Interaction logic for loginPage.xaml
+    /// Interaction logic for registerPage.xaml
     /// </summary>
-    public partial class LoginPage : Page
+    public partial class RegisterPage : Page
     {
-        public LoginPage()
+        public RegisterPage()
         {
             InitializeComponent();
         }
 
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        private void CreateAccountButton_Click(object sender, RoutedEventArgs e)
         {
-            MetroWindow window = new Menu();
-            window.Show();
-            Window.GetWindow(this).Close();
-        }
-
-        private void RegisterButton_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new RegisterPage());
+            NavigationService.Navigate(new LoginPage());
         }
     }
 }

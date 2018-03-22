@@ -28,7 +28,7 @@ namespace DnDTool
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            MetroWindow window = new Menu();
+            MetroWindow window = new CreationHub();
             window.Show();
             Window.GetWindow(this).Close();
         }

@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
@@ -18,11 +19,26 @@ namespace DnDTool
     /// <summary>
     /// Interaction logic for Menu.xaml
     /// </summary>
-    public partial class Menu : MetroWindow
+    public partial class CreationHub : MetroWindow
     {
-        public Menu()
+        private Boolean lMenuOpen = false;
+
+        public CreationHub()
         {
             InitializeComponent();
+        }
+
+        private void LMenuButton_Click(object sender, RoutedEventArgs e)
+        {
+            String fx;
+            if (lMenuOpen)
+                fx = "lMenuHide";
+            else
+                fx = "lMenuShow";
+            lMenuOpen = !lMenuOpen;
+
+            Storyboard sb = Resources[fx] as Storyboard;
+            sb.Begin(lMenu);
         }
     }
 }

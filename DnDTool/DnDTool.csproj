@@ -63,8 +63,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Menu.xaml.cs">
-      <DependentUpon>Menu.xaml</DependentUpon>
+    <Compile Include="CreationHub.xaml.cs">
+      <DependentUpon>CreationHub.xaml</DependentUpon>
     </Compile>
     <Compile Include="RegisterPage.xaml.cs">
       <DependentUpon>RegisterPage.xaml</DependentUpon>
@@ -88,7 +88,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Menu.xaml">
+    <Page Include="CreationHub.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -126,6 +126,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Dnd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="arrowleft.png" />
+    <Resource Include="arrowright.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,30 +12,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MahApps.Metro.Controls;
 
 namespace DnDTool
 {
     /// <summary>
-    /// Interaction logic for loginPage.xaml
+    /// Interaction logic for MainMenu.xaml
     /// </summary>
-    public partial class LoginPage : Page
+    public partial class MainMenu : Page
     {
-        public LoginPage()
+        public MainMenu()
         {
             InitializeComponent();
         }
 
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        private void CreationHubButton_Click(object sender, RoutedEventArgs e)
         {
-            MetroWindow window = new ProgramWindow();
-            window.Show();
-            Window.GetWindow(this).Close();
-        }
-
-        private void RegisterButton_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new RegisterPage());
+            NavigationService.Navigate(new CreationHub());
         }
     }
 }
